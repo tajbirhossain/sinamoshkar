@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+
+
+
+/* first page styles */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+header ul li a {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #9BBAC2;
+    position: relative;
+}
+
+header ul li.active a {
+    color: #fff;
+    background-color: rgb(82, 182, 188, 15%);
+}
+
+header ul li.active a::after {
+    width: 100%;
+    height: 1px;
+    background-color: #52B6BC;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+header ul li a img {
+    margin-right: 7px;
+}
+
+header ul li.active a img {
+    filter: brightness(100);
+}
+
+
+
+
+main {
+    padding: 32px 0;
+}
+
+main .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.settingItem {
+    width: calc(100% / 3 - 10px);
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #0D0D18;
+}
+
+.settingItem h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #F1F0F0;
+    margin-bottom: 15px;
+}
+
+.settingLeft p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #F1F0F0;
+    margin-bottom: 20px;
+}
+
+.settingLeft p span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #C1D0CB;
+    margin-right: 5px;
+}
+
+.settingLeftBtn {
+    margin-bottom: 30px;
+}
+
+.settingLeftBtn button {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #52B6BC;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.settingLeftBtn button:last-child {
+    background-color: #52B6BC;
+    color: #000;
+}
+
+.settingLeftConv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settingLeftConv p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #F0E3E4;
+}
+
+
+.settingConvToggle {
+    display: flex;
+    align-items: center;
+}
+
+.settingConvToggle small {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* custom switch styles */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    margin: 0 8px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 1px;
+    bottom: 0.6px;
+    background-color: #414141;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #52B6BC;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #52B6BC;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(11px);
+    -ms-transform: translateX(11px);
+    transform: translateX(11px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* custom switch styles ends */
+
+
+
+
+.settingCenter h2 {
+    margin-bottom: 30px;
+}
+
+.settingInpRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.settingInpRow input {
+    width: 50%;
+    height: 44px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+.settingInpRow input::placeholder {
+    color: #C1D0CB;
+}
+
+
+.settingCenterConn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #414141;
+}
+
+.settingConnLeft {
+    width: 126px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* custom checkbox styles */
+/* Customize the label (the container) */
+.custom-checkbox {
+    height: 22px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1.3px solid #C1D0CB;
+}
+
+/* On mouse-over, add a grey background color */
+/* .custom-checkbox:hover input~.checkmark {
+    background-color: #ccc;
+} */
+
+/* When the checkbox is checked, add a blue background */
+.custom-checkbox input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+    left: 6px;
+    top: 2.5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* custom checkbox styles ends */
+
+
+.settingConnLeft p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #C1D0CB;
+}
+
+
+.settingCenterConn button {
+    width: calc(100% - 141px);
+    height: 45px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    background-color: #52B6BC;
+    border: none;
+}
+
+
+
+.conDevice {
+    font-size: 14px;
+    font-weight: 600;
+    color: #F1F0F0;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.conDevice span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #C1D0CB;
+    margin-right: 5px;
+}
+
+.settingCenterIps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.centerIpsItem {
+    width: calc(100% / 3);
+}
+
+.centerIpsItem:first-child {
+    padding-right: 10px;
+}
+
+.centerIpsItem:nth-child(2) {
+    text-align: center;
+}
+
+.centerIpsItem:last-child {
+    text-align: end;
+    padding-left: 10px;
+}
+
+.centerIpsItem h3 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #C1D0CB;
+    margin-bottom: 5px;
+}
+
+.centerIpsItem p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #F1F0F0;
+}
+
+
+
+.settingCenterDisBtn {
+    width: 100%;
+}
+
+.settingCenterDisBtn button {
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #52B6BC;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+.settingRightConn {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #414141;
+}
+
+.settingRightConn .settingConnLeft {
+    margin-bottom: 15px;
+}
+
+.settingRightConn button {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    background-color: #52B6BC;
+    border: none;
+}
+
+
+
+
+
+
+
+@media (max-width: 1050px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .settingItem {
+        width: calc(50% - 10px);
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media (max-width: 760px) {
+    .container {
+        padding: 0 15px;
+    }
+    header .logo {
+        margin-bottom: 15px;
+    }
+    .settingItem {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 7px;
+    }
+    header ul li a {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+/* first page styles ends */
+
+
+
+
+
+
+
+
+
+/* second page styles */
+.sightToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.sightToggle button {
+    height: 60px;
+    padding: 0 16px;
+    background-color: #193446;
+    border: none;
+    border-radius: 12px;
+    color: #F1F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sightToggle button span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sightToggle button h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.sightToggle button:first-child img {
+    margin-right: 18px;
+}
+
+.sightToggle button:nth-child(2) {
+    margin: 0 16px;
+}
+
+.sightToggle button:nth-child(2) h3 {
+    margin-left: 70px;
+}
+
+
+
+.sightItem table {
+    margin-bottom: 45px;
+}
+
+.sightItem table th {
+    font-size: 12px;
+    font-weight: 400;
+    color: #C1D0CB;
+    text-align: start;
+    padding: 10px 0;
+    padding-right: 10px;
+}
+
+.sightItem table th:last-child {
+    padding-right: 0;
+}
+
+.sightItem table td {
+    font-size: 12px;
+    font-weight: 500;
+    color: #F0E3E4;
+    text-align: start;
+    padding: 10px 0;
+    padding-right: 10px;
+}
+
+
+
+
+/* custom range styles */
+.sightItem .range {
+    position: relative;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px;
+    background-color: #52B6BC33;
+    border: 1px solid #414141;
+    border-radius: 20px;
+}
+
+.range-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 12px;
+    height: 8px;
+    background: #ff00;
+}
+
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 11px;
+    width: 11px;
+    box-shadow: 0px 0px 0px 1px #fff;
+    background-color: #52B6BC;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.range-input::-moz-range-thumb {
+    height: 11px;
+    width: 11px;
+    box-shadow: 0px 0px 0px 1px #fff;
+    background-color: #52B6BC;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+
+
+.value {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* custom range styles ends */
+
+
+
+.sightItem table td:last-child {
+    text-align: center;
+    padding-right: 0;
+}
+
+.sightItem table td .custom-checkbox {
+    width: fit-content;
+    padding-left: 22px;
+    margin: 0 auto;
+}
+
+
+
+
+.sightLeftBottomRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sightLeftBottomText {
+    width: 53%;
+}
+
+.sightLeftBottomText p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #F0E3E4;
+}
+
+.sightLeftBottomSlider {
+    width: 47%;
+    display: flex;
+    align-items: center;
+}
+
+.sightLeftBottomSlider .range {
+    width: calc(100% - 28px);
+}
+.sightLeftBottomSlider p {
+    width: 21px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #F0E3E4;
+    margin-left: 7px;
+}
+
+
+
+
+
+
+
+.settingItem.sightRight {
+    width: calc(100% / 3 - 10px + 100% / 3 - 10px);
+}
+
+.sightChartTopRow {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.sightChartTopItem {
+    width: calc(50% - 15px);
+    border-radius: 16px;
+    border: 1px solid #414141;
+    /* padding: 16px; */
+}
+.sightChartTopItem h3, .sightChartBottom h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding: 16px;
+    padding-bottom: 0;
+}
+
+
+
+.sightChartBottomRow {
+    width: 100%;
+}
+
+.sightChartBottom {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #414141;
+}
+
+
+
+@media (max-width: 1050px) {
+    .settingItem.sightItem.sightLeft {
+        width: 100%;
+    }
+    .sightItem table {
+        width: 100%;
+    }
+
+
+
+    .settingItem.sightItem.sightRight {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .sightToggle {
+        flex-wrap: wrap;
+    }
+    .sightToggle button, .sightToggle button:nth-child(2) {
+        margin: 0 8px;
+        margin-bottom: 10px;
+    }
+    .sightChartTopRow {
+        flex-wrap: wrap;
+    }
+    .sightChartTopItem {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+/* second page styles ends */

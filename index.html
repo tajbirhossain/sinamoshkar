@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/images/logo.svg" alt="" class="logo">
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <img src="assets/images/setting.svg" alt="">
+                        <span>Comms Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/images/sight.svg" alt="">
+                        <span>SightSense</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/images/climate.svg" alt="">
+                        <span>ClimateSense</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="settingItem settingLeft">
+                <h2>Firmware Update</h2>
+                <p><span>Latest Firmware:</span>Jan 27 2024 - 12:51:06</p>
+                <div class="settingLeftBtn">
+                    <button>Select File</button>
+                    <button>Update Firmware</button>
+                </div>
+                <div class="settingLeftConv">
+                    <p>Unit Conversion Settings</p>
+                    <div class="settingConvToggle">
+                        <small>CM</small>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <small>FOOT</small>
+                    </div>
+                </div>
+            </div>
+            <div class="settingItem settingCenter">
+                <h2>WiFi Connect</h2>
+                <div class="settingInpRow">
+                    <input type="text" placeholder="SSID">
+                    <input type="text" placeholder="Password">
+                </div>
+                <div class="settingCenterConn">
+                    <div class="settingConnLeft">
+                        <label class="custom-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Show Password</p>
+                    </div>
+                    <button>Connect</button>
+                </div>
+                <p class="conDevice"><span>Latest Firmware:</span>Jan 27 2024 - 12:51:06</p>
+                <div class="settingCenterIps">
+                    <div class="centerIpsItem">
+                        <h3>IP Address:</h3>
+                        <p>192.168.68.69</p>
+                    </div>
+                    <div class="centerIpsItem">
+                        <h3>Netmask:</h3>
+                        <p>255.255.252.0</p>
+                    </div>
+                    <div class="centerIpsItem">
+                        <h3>Gateway:</h3>
+                        <p>192.168.68.1</p>
+                    </div>
+                </div>
+                <div class="settingCenterDisBtn">
+                    <button>Disconnected</button>
+                </div>
+            </div>
+            <div class="settingItem settingRight">
+                <h2>MQTT Settings</h2>
+                <div class="settingInpRow">
+                    <input type="text" placeholder="Host">
+                    <input type="text" placeholder="Port">
+                </div>
+                <div class="settingInpRow">
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Password">
+                </div>
+                <div class="settingRightConn">
+                    <div class="settingConnLeft">
+                        <label class="custom-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Show Password</p>
+                    </div>
+                    <button>Submit</button>
+                </div>
+                <div class="settingCenterIps">
+                    <div class="centerIpsItem">
+                        <h3>Connected to:</h3>
+                        <p>roomsense-test</p>
+                    </div>
+                    <div class="centerIpsItem">
+                        <h3>Host:</h3>
+                        <p>192.168.68.77</p>
+                    </div>
+                    <div class="centerIpsItem">
+                        <h3>Port:</h3>
+                        <p>1883</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
